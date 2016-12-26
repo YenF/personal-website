@@ -5,10 +5,13 @@ node_js:
 before_install:
 - openssl aes-256-cbc -K $encrypted_0348c5e5ed67_key -iv $encrypted_0348c5e5ed67_iv
   -in deploy-key.enc -out deploy-key -d
+  
 
 after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
-  - chmod 600 .travis/deploy-key.enc # this key should have push access
-  - ssh-add .travis/deploy_key.enc
-  - git remote add deploy https://github.com/YenF/personal-website.git
+  - chmod 600 deploy-key # this key should have push access
+  - ssh-add deploy_key
+  - git remote add deploy "deploy@yenfengc.com:/var/www/yenfengc"
+  - git config user.name "Travic CI"
+  - git config user.email "ree975@gmail.com"
   - git push deploy
