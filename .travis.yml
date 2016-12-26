@@ -10,8 +10,8 @@ before_install:
 after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
   - chmod 600 deploy-key # this key should have push access
-  - ssh-add deploy_key
+  - ssh-add deploy-key
   - git remote add deploy "deploy@yenfengc.com:/var/www/yenfengc"
   - git config user.name "Travic CI"
   - git config user.email "ree975@gmail.com"
-  - git push deploy
+  - git push --force deploy
