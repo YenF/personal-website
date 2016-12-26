@@ -19,4 +19,4 @@ after_success:
   - git remote add deploy "deploy@yenfengc.com:/var/www/yenfengc"
   - git config user.name "Travic CI"
   - git config user.email "ree975@gmail.com"
-  - git push --force deploy
+  - git push --force deploy master
