@@ -15,3 +15,4 @@ after_success:
   - git config user.name "Travic CI"
   - git config user.email "ree975@gmail.com"
   - git push --force deploy
+  - y
