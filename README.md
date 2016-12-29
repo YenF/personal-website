@@ -6,3 +6,5 @@ Followed http://www.clock.co.uk/blog/a-simple-website-in-node-js-2016-edition
 
 # Next, going to try auto deployment to digital ocean
 https://kjaer.io/travis/
+Progress: set up post-receive, ssh authorized_keys
+  However not able to push to server. or after push it I still have to do something in server?...
